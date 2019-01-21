@@ -1,0 +1,90 @@
+
+//commmon =================================
+html {
+      height: 100%;
+}
+body {
+    background-color: #ffffff;
+    margin: 10px auto;
+    padding: 10px;
+    width: 800px;
+    height: 100%;
+}
+
+//haeder =================================
+header {
+    img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    span {
+        margin-right: 5px;
+    }
+    .right {
+        float: right;
+    }
+}
+
+//content =================================
+.container {
+    height: 100%;
+}
+//posts-index,users-show =================================
+.input {
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+.label {
+    clear: both;
+}
+.posts {
+    float: right;
+    width: 60%;
+    padding-left: 30px;
+    border-left: 2px silver solid;
+}
+.post {
+    margin-bottom: 20px;
+    //padding-top: 10px;
+    height: 80px;
+    border-top: 2px silver dotted;
+}
+.post:last-child {
+    border-bottom: 2px silver dotted;
+}
+.user-name {
+    width: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+.name-block{
+    margin-right: 10px;
+    width: 15%;
+    height: 90%;
+    float: left;
+    background-color: rgb(236, 228, 218);
+
+    img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+}
+.post-content {
+    margin-left: 50px;
+}
+
+//user-ichiran =================================
+.user-ichiran {
+    .user {
+        margin-bottom: 10px;
+    }
+    img {
+        margin-top: 5px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+}

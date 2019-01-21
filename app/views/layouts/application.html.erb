@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TuburoApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+    <% if user_signed_in? %>
+      <div class=user-icon>
+        <%= image_tag current_user.picture.url %>
+        <%= current_user.name %>さん
+      </div>
+      <span><%= link_to "ホーム", root_path %></span>
+      <span><%= link_to "ユーザー一覧", users_path %></span>
+      <span class="right"><%= link_to "ユーザー情報変更", edit_user_registration_path %></span>
+      <span class="right"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></span>
+    <% end %>
+  </header>
+    <%= yield %>
+  </body>
+</html>

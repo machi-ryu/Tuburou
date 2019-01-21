@@ -1,0 +1,9 @@
+
+<% @posts.each do |post| %>
+    <div class="post">
+        <div cass="user-name"><%=post.user.name %></div>
+        <div class="name-block"><%= image_tag post.user.picture.url %></div>
+        <div>Posted <%= time_ago_in_words(post.created_at) %> ago.</div>
+        <div class="post-content"><%= post.content %></div>
+    </div>
+<% end %>

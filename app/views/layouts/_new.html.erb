@@ -1,0 +1,9 @@
+<%= form_for @post, :url => {:action => 'create'} do |f| %>
+    <div class="label">
+        <%= f.label :content %>
+    </div>
+    <%= f.text_area :content, :size=>"30x5", placeholder: "つぶやきを入力" %>
+    <div class="submit">
+        <%= f.submit "ツイート"%>
+    </div>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>ユーザー一覧</h1>
+<div class="user-ichiran">
+    <% @users.each do |user| %>
+        <div class="user">
+            <div><%= link_to user.name, user_path(user) %></div>
+            <div><%= link_to user_path(user), target: "_blank" do %>
+                <%= image_tag user.picture.url %>
+            <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>
