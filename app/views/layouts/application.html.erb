@@ -13,7 +13,7 @@
   <header>
     <% if user_signed_in? %>
       <div class=user-icon>
-        <%= image_tag current_user.picture.url %>
+        <%= #image_tag current_user.picture.url %>
         <%= current_user.name %>さん
       </div>
       <span><%= link_to "ホーム", root_path %></span>
