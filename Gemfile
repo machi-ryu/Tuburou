@@ -7,7 +7,13 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 
+gem 'devise'
+gem 'carrierwave', '1.2.2'
 gem 'bootstrap'
+gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp/all'
+
+gem 'hirb'
+gem 'hirb-unicode'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -37,9 +43,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
-gem 'devise'
-gem 'carrierwave', '1.2.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
