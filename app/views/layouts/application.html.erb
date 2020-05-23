@@ -7,13 +7,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, intial-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   </head>
 
   <body>
   <header>
     <% if user_signed_in? %>
       <div class=user-icon>
+        <%= image_tag current_user.picture.to_s, class:"user-picture" %>
         <%= current_user.name %>さん
       </div>
       <span><%= link_to "ホーム", root_path %></span>

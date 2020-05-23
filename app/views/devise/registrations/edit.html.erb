@@ -11,6 +11,7 @@
   <div class="field">
     <%= f.label :picture %>
     <%= f.file_field :picture %>
+    <%= image_tag current_user.picture.to_s, class:"image-preview" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
