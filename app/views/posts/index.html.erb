@@ -5,7 +5,11 @@
             <%= render 'layouts/new' %>
         </div>
         <div class="col-sm-7">
-            <%= render 'layouts/posts'%>
+            <% @posts.each do |post| %>
+                <div class="post" id="post-<%= post.id %>">
+                    <%= render 'layouts/posts', post: post %>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>

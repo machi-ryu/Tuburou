@@ -1,12 +1,14 @@
-
-<% @posts.each do |post| %>
-    <div class="post">
-        <div cass=""><%=post.user.name %></div>
+    <div class="user-area">
+        <div class=""><%= post.user.name %></div>
         <div class="name-block">
             <%= image_tag post.user.picture.url %>
             <%= link_to "", user_path(id: post.user.id), class:"user-link" %>
         </div>
-        <div>Posted <%= time_ago_in_words(post.created_at) %> ago.</div>
+    </div>
+    <div class="detail">
+        <div class="post-time">Posted <%= time_ago_in_words(post.created_at) %> ago.</div>
         <div class="post-content"><%= post.content %></div>
     </div>
-<% end %>
+    <div class="tool">
+        <%= render 'layouts/like', post: post %>
+    </div>
