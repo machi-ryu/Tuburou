@@ -6,6 +6,7 @@ class PostsController < ApplicationController
         #@posts = Post.all
         #@posts = current_user.post.all 
         @posts = current_user.feed 
+        @likes = Like.all
     end
 
     def create

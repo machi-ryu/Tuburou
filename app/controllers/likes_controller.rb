@@ -9,6 +9,7 @@ class LikesController < ApplicationController
     @post = Post.find(params[:like][:post_id])
     #@post = Post.new
     #@posts = current_user.feed
+    @likes = Like.all
   end
 
   def destroy
@@ -21,6 +22,7 @@ class LikesController < ApplicationController
     @post = Post.find(params[:post_id])
     #@post = Post.new
     #@posts = current_user.feed
+    @likes = Like.all
   end
 
   private

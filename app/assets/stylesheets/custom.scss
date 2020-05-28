@@ -115,6 +115,13 @@ header {
 .tool {
     margin-left: 25%;
     clear: both;
+    form {
+        display: inline;
+    }
+}
+.iine-count {
+    font-size: 0.8em;
+    margin-left: 5px;
 }
 
 //user-ichiran =================================
