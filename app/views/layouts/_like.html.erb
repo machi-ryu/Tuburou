@@ -4,17 +4,23 @@
         <%= form_for(current_user.likes.find_by(post_id: post.id),
                 html: {method: :delete}, remote: true) do |f| %>
             <%= hidden_field_tag :post_id, post.id %>
-            <%= f.submit "いいね", class:"btn btn-danger btn-sm" %>
+            <%= button_tag type:"submit", class:"btn btn-default" do %>
+                <%= fa_icon "heart" %>
+            <% end %>
         <% end %>
     <% else %>
         <%= form_for(current_user.likes.build, remote: true) do |f| %>
             <%= f.hidden_field :post_id, :value => post.id %>
-            <%= f.submit "いいね", class:"btn btn-outline-secondary btn-sm" %>
+            <%= button_tag type:"submit", class:"btn btn-default" do %>
+                <%= fa_icon "heart-o" %>
+            <% end %>
         <% end %>
     <% end %>
 <% else %>
         <%= form_for(current_user.likes.build, remote: true) do |f| %>
-            <%= f.submit "いいね", class:"btn btn-outline-secondary btn-sm disabled" %>
+            <%= button_tag type:"submit", class:"btn btn-default disabled" do %>
+                <%= fa_icon "heart-o" %>
+            <% end %>
         <% end %>
 <% end %>
 

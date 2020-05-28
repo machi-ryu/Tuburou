@@ -12,6 +12,7 @@ gem 'carrierwave', '1.2.2'
 gem 'bootstrap'
 gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp/all'
 gem 'jquery-rails'
+gem 'font-awesome-rails'
 
 gem 'hirb'
 gem 'hirb-unicode'
