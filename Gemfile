@@ -8,7 +8,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.1'
 
 gem 'devise'
-gem 'carrierwave', '1.2.2'
+gem 'carrierwave', '1.3.2'
 gem 'bootstrap'
 gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp/all'
 gem 'jquery-rails'
